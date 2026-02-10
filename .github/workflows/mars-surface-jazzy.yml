@@ -1,0 +1,97 @@
+name: Mars Surface Jazzy Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - mars-surface/**
+      - .github/workflows/mars-surface-jazzy.yml
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - mars-surface/**
+      - .github/workflows/mars-surface-jazzy.yml
+
+  release:
+    types: [published, released]
+
+env:
+  REGISTRY: ghcr.io
+  OWNER: collaborativeroboticslab
+  IMAGE_NAME: algorithmic-robots-mars-surface
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read  # needed to access repo releases
+      packages: write
+
+    steps:
+      - name: Remove unnecessary files
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Get latest release or prerelease asset URL
+        id: get_asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO="CollaborativeRoboticsLab/algorithmic-robots-world"
+          RELEASES_API="https://api.github.com/repos/$REPO/releases"
+
+          # Get most recent non-draft release (published or prerelease)
+          RELEASE_JSON=$(curl -s -H "Authorization: token $GITHUB_TOKEN" $RELEASES_API)
+          
+          # Filter out drafts, pick the latest, and find the matching asset
+          ASSET_URL=$(echo "$RELEASE_JSON" | \
+            jq -r '[.[] | select(.draft == false)][0].assets[]? | select(.name=="AR_latest.zip") | .url')
+
+          if [ -z "$ASSET_URL" ]; then
+            echo "❌ Asset AR_latest.zip not found in recent releases."
+            exit 1
+          fi
+
+          echo "✅ Found asset URL: $ASSET_URL"
+          echo "ASSET_URL=$ASSET_URL" >> $GITHUB_ENV
+
+
+      - name: Download AR_latest.zip (private/public compatible)
+        run: |
+          curl -L -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -H "Accept: application/octet-stream" \
+               "$ASSET_URL" -o mars-surface/AR_latest.zip
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the Container registry
+        run: |
+          docker login --username ${{ env.OWNER }} --password ${{ secrets.ACCESS_TOKEN }} ghcr.io 
+
+      - name: Build and Push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./mars-surface
+          file: mars-surface/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/${{ env.IMAGE_NAME }}:jazzy

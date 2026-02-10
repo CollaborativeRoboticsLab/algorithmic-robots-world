@@ -1,0 +1,53 @@
+services:
+  ar-discovery:
+    image: ghcr.io/collaborativeroboticslab/turtlebot4-discovery:jazzy
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - SERVER_ID=${SERVER_ID:-0}
+      - SERVER_IP=${SERVER_IP:-0.0.0.0}
+      - SERVER_PORT=${SERVER_PORT:-11811}
+    network_mode: host
+    ipc: host
+    restart: unless-stopped
+
+  ar-workspace:
+    image: ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy
+    environment:
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - ROS_DISCOVERY_SERVER=${ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
+      - ROS_SUPER_CLIENT=1
+      - NO_AT_BRIDGE=1
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    network_mode: host
+    ipc: host
+    volumes:
+      - ./workspace:/workspace:rw
+      - ./code-server/config:/root/.config/code-server:rw
+      - ./code-server/data:/root/.local/share/code-server:rw
+    depends_on:
+      - ar-discovery
+
+  ar-rviz:
+    image: ghcr.io/collaborativeroboticslab/turtlebot4-rviz:jazzy
+    command: ["ros2", "launch", "turtlebot4_viz", "view_navigation.launch.py", "use_sim_time:=true"]
+    environment:
+      - PYTHONUNBUFFERED=1                # GUI related
+      - DISPLAY                           # GUI related
+      - QT_X11_NO_MITSHM=1                # GUI related
+      - NVIDIA_VISIBLE_DEVICES=all        # GUI related
+      - NVIDIA_DRIVER_CAPABILITIES=all    # GUI related
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - ROS_DISCOVERY_SERVER=${ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
+      - ROS_SUPER_CLIENT=1
+    restart: unless-stopped
+    privileged: true
+    ipc: host
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related
+    depends_on:
+      - ar-discovery

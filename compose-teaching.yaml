@@ -1,0 +1,9 @@
+services:
+  teaching-jupyter:
+    image: ghcr.io/collaborativeroboticslab/algorithmic-robots-tutorials:latest
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./teaching-jupyter/notebooks:/home/jovyan/work
