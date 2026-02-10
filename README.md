@@ -55,6 +55,6 @@ docker compose -f compose-physical.yaml up
 
 ```bash
 cd algorithmic-robots-world
-docker compose -f compose-teaching.yaml pull
-docker compose -f compose-teaching.yaml up
+docker compose -f compose-jupyter.yaml pull
+docker compose -f compose-jupyter.yaml up
 ```
