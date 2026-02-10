@@ -7,16 +7,16 @@ This pacakge provides and utilizes following containers
 - **Turtlebot4-Discovery**          
     Provides the discovery service for the simulation
 
-- **Algorithmic-Robots-Mars-Surface-Simulation**         
-    Provides the Unreal based simulation environment
-
 - **Turtlebot4-Rviz**   
     Provides rviz tools to interact with both simulation and physical robots
 
 - **Turtlebot4-workspace**  
     Provides a web browser based workspace that can be used to test code on both simulation and physical robots
 
-- **Algorithmic-robots-labs**
+- **Algorithmic-Robots-Mars-Surface-Simulation**         
+    Provides the Unreal based simulation environment
+
+- **Algorithmic-Robots-Labs**  
     Provides a Jupyter notebooks based workspace to explore mathematical concepts surrounding robotics
 
 
