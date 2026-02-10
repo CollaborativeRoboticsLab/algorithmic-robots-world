@@ -16,7 +16,7 @@ This pacakge provides and utilizes following containers
 - **Turtlebot4-workspace**  
     Provides a web browser based workspace that can be used to test code on both simulation and physical robots
 
-- **Algorithmic-robots-labs**
+- **Algorithmic-robots-labs**  
     Provides a Jupyter notebooks based workspace to explore mathematical concepts surrounding robotics
 
 
