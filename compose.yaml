@@ -11,24 +11,24 @@ services:
     ipc: host
     restart: unless-stopped
 
-  ar-simulation:
-    image: ghcr.io/collaborativeroboticslab/algorithmic-robots-mars-surface:jazzy
-    environment:
-      - PYTHONUNBUFFERED=1                # GUI related
-      - DISPLAY                           # GUI related
-      - QT_X11_NO_MITSHM=1                # GUI related
-      - NVIDIA_VISIBLE_DEVICES=all        # GUI related
-      - NVIDIA_DRIVER_CAPABILITIES=all    # GUI related
-      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
-      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-      - ROS_DISCOVERY_SERVER=${ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
-    restart: unless-stopped
-    privileged: true
-    network_mode: host
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related    
-    depends_on:
-      - ar-discovery
+  # ar-simulation:
+  #   image: ghcr.io/collaborativeroboticslab/algorithmic-robots-mars-surface:jazzy
+  #   environment:
+  #     - PYTHONUNBUFFERED=1                # GUI related
+  #     - DISPLAY                           # GUI related
+  #     - QT_X11_NO_MITSHM=1                # GUI related
+  #     - NVIDIA_VISIBLE_DEVICES=all        # GUI related
+  #     - NVIDIA_DRIVER_CAPABILITIES=all    # GUI related
+  #     - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+  #     - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+  #     - ROS_DISCOVERY_SERVER=${ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
+  #   restart: unless-stopped
+  #   privileged: true
+  #   network_mode: host
+  #   volumes:
+  #     - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related    
+  #   depends_on:
+  #     - ar-discovery
 
   ar-workspace:
     image: ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy
