@@ -4,6 +4,8 @@ FROM ros:jazzy
 RUN apt-get update && \
 	apt-get install -y \
         ros-jazzy-rviz2 \
+        ros-jazzy-rmw-fastrtps-cpp \
+        ros-jazzy-rmw-cyclonedds-cpp \
         x11-apps \
 	&& rm -rf /var/lib/apt/lists/*
 
