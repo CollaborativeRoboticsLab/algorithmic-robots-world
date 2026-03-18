@@ -83,7 +83,7 @@ jobs:
 
       - name: Log in to the Container registry
         run: |
-          docker login --username ${{ env.OWNER }} --password ${{ secrets.ACCESS_TOKEN }} ghcr.io 
+          docker login --username ${{ env.OWNER }} --password ${{ secrets.GH_PAT }} ghcr.io 
 
       - name: Build and Push Docker image
         uses: docker/build-push-action@v5
