@@ -24,9 +24,9 @@ COPY AR_latest.zip /world.zip
 RUN unzip /world.zip -d /world && \
     rm /world.zip
 
-# Find the actual simulation binary (irs_*.x86_64), set it executable, and symlink it as /entry
+# Find the actual simulation binary (ar_*.x86_64), set it executable, and symlink it as /entry
 RUN set -e && \
-    EXEC_PATH=$(find /world -type f -regex ".*/irs_.*\.x86_64$" | head -n 1) && \
+    EXEC_PATH=$(find /world -type f -regex ".*/ar_.*\.x86_64$" | head -n 1) && \
     chmod +x "$EXEC_PATH" && \
     ln -s "$EXEC_PATH" /entry
 
