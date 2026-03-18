@@ -40,6 +40,7 @@ Required environmental variable need to be in a `.env` file. An `example.env` fi
 ```bash
 cd algorithmic-robots-world
 docker compose pull
+xhost +local:root
 docker compose up
 ```
 
@@ -48,6 +49,7 @@ docker compose up
 ```bash
 cd algorithmic-robots-world
 docker compose -f compose-physical.yaml pull
+xhost +local:root
 docker compose -f compose-physical.yaml up
 ```
 
@@ -56,5 +58,6 @@ docker compose -f compose-physical.yaml up
 ```bash
 cd algorithmic-robots-world
 docker compose -f compose-jupyter.yaml pull
+xhost +local:root
 docker compose -f compose-jupyter.yaml up
 ```
