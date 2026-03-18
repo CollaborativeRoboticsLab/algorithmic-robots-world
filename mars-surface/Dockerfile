@@ -15,10 +15,10 @@ RUN apt-get update && \
     unzip \
     findutils \
     ros-jazzy-rmw-fastrtps-cpp \
-    ros-jazzy-rmw-cyclonedds-cpp \
+    ros-jazzy-rmw-cyclonedds-cpp
 
-    # Copy the pre-downloaded release ZIP
-    COPY IRS_latest.zip /world.zip
+# Copy the pre-downloaded release ZIP
+COPY AR_latest.zip /world.zip
 
 # Unzip and clean
 RUN unzip /world.zip -d /world && \
