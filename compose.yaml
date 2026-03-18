@@ -15,6 +15,23 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related    
 
+  ar-rviz:
+    image: ghcr.io/collaborativeroboticslab/rviz:jazzy
+    command: ["rviz2"]
+    environment:
+      - PYTHONUNBUFFERED=1                # GUI related
+      - DISPLAY                           # GUI related
+      - QT_X11_NO_MITSHM=1                # GUI related
+      - NVIDIA_VISIBLE_DEVICES=all        # GUI related
+      - NVIDIA_DRIVER_CAPABILITIES=all    # GUI related
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    restart: unless-stopped
+    privileged: true
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related
+      - /rviz/config:/root/.config/rviz:rw
+
   ar-workspace:
     image: ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy
     environment:
@@ -24,7 +41,6 @@ services:
     tty: true
     stdin_open: true
     network_mode: host
-    ipc: host
     volumes:
       - ./workspace:/workspace:rw
       - ./code-server/config:/root/.config/code-server:rw
