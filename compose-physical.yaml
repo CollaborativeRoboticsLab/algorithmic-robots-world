@@ -1,16 +1,4 @@
 services:
-  ar-discovery:
-    image: ghcr.io/collaborativeroboticslab/turtlebot4-discovery:jazzy
-    environment:
-      - ROS_DOMAIN_ID=0
-      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-      - SERVER_ID=${SERVER_ID:-0}
-      - SERVER_IP=${SERVER_IP:-0.0.0.0}
-      - SERVER_PORT=${SERVER_PORT:-11811}
-    network_mode: host
-    ipc: host
-    restart: unless-stopped
-
   ar-workspace:
     image: ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy
     environment:
@@ -28,8 +16,6 @@ services:
       - ./workspace:/workspace:rw
       - ./code-server/config:/root/.config/code-server:rw
       - ./code-server/data:/root/.local/share/code-server:rw
-    depends_on:
-      - ar-discovery
 
   ar-rviz:
     image: ghcr.io/collaborativeroboticslab/turtlebot4-rviz:jazzy
@@ -49,5 +35,3 @@ services:
     ipc: host
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related
-    depends_on:
-      - ar-discovery

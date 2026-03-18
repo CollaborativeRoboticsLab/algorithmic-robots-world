@@ -1,1 +1,3 @@
-/code-server
+code-server/
+workspace/
+.env

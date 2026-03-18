@@ -1,9 +1,10 @@
-[2026-03-18T04:59:42.642Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T04:59:43.740Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T04:59:44.778Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T04:59:46.056Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T04:59:47.734Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T04:59:50.339Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T04:59:54.397Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T05:00:01.715Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
-[2026-03-18T05:00:15.372Z] error listen EADDRINUSE: address already in use 0.0.0.0:8080
+File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
+a socket was left hanging
+a socket was left hanging
+[13:23:54] [127.0.0.1][5cdff902][ExtensionHostConnection] Unknown reconnection token (never seen).
+[13:23:54] [127.0.0.1][c8500158][ManagementConnection] Unknown reconnection token (never seen).
+File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
+File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
+a socket was left hanging
+a socket was left hanging
