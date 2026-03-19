@@ -2,9 +2,9 @@ services:
   ar-workspace:
     image: ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy
     environment:
-      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - ROS_DOMAIN_ID=${ROBOT_ROS_DOMAIN_ID:-0}
       - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-      - ROS_DISCOVERY_SERVER=${ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
+      - ROS_DISCOVERY_SERVER=${ROBOT_ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
       - ROS_SUPER_CLIENT=1
       - NO_AT_BRIDGE=1
     restart: unless-stopped
@@ -26,9 +26,9 @@ services:
       - QT_X11_NO_MITSHM=1                # GUI related
       - NVIDIA_VISIBLE_DEVICES=all        # GUI related
       - NVIDIA_DRIVER_CAPABILITIES=all    # GUI related
-      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
+      - ROS_DOMAIN_ID=${ROBOT_ROS_DOMAIN_ID:-0}
       - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-      - ROS_DISCOVERY_SERVER=${ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
+      - ROS_DISCOVERY_SERVER=${ROBOT_ROS_DISCOVERY_SERVER:-127.0.0.1:11811}
       - ROS_SUPER_CLIENT=1
     restart: unless-stopped
     privileged: true
