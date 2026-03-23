@@ -1,5 +1,4 @@
-code-server/config/
-code-server/data/
+code-server/
 workspace/
 rviz-config/
 .env
