@@ -27,7 +27,15 @@ Required environmental variables need to be in a `.env` file. An `example.env` f
 [More information on Parameters](./docs/parameters.md)
 
 
-## Start Simulation environment
+## Doing custom work
+
+Use the provided web based code server to develop your work.
+
+[More information on Code Server](./docs/development.md)
+
+## Quick commands
+
+### Start Simulation environment
 
 ```bash
 cd algorithmic-robots-world
@@ -36,7 +44,7 @@ xhost +local:root
 docker compose -f compose-simulation.yaml up
 ```
 
-## Start Physical robot environment
+### Start Physical robot environment
 
 ```bash
 cd algorithmic-robots-world
@@ -45,7 +53,7 @@ xhost +local:root
 docker compose -f compose-physical.yaml up
 ```
 
-## Start Algorithmic Robotics Labs
+### Start Algorithmic Robotics Labs
 
 ```bash
 cd algorithmic-robots-world
