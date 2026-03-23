@@ -1,55 +1,41 @@
-[2026-03-18T13:08:26.420Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
-[2026-03-18T13:08:26.421Z] info  Using user-data-dir /root/.local/share/code-server
-[2026-03-18T13:08:26.434Z] info  Using config file /root/.config/code-server/config.yaml
-[2026-03-18T13:08:26.434Z] info  HTTP server listening on http://0.0.0.0:8080/
-[2026-03-18T13:08:26.434Z] info    - Authentication is disabled
-[2026-03-18T13:08:26.434Z] info    - Not serving HTTPS
-[2026-03-18T13:08:26.434Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
-[13:10:02] 
+[2026-03-23T15:05:53.896Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
+[2026-03-23T15:05:53.897Z] info  Using user-data-dir /root/.local/share/code-server
+[2026-03-23T15:05:53.906Z] info  Using config file /root/.config/code-server/config.yaml
+[2026-03-23T15:05:53.906Z] info  HTTP server listening on http://0.0.0.0:8080/
+[2026-03-23T15:05:53.906Z] info    - Authentication is disabled
+[2026-03-23T15:05:53.906Z] info    - Not serving HTTPS
+[2026-03-23T15:05:53.906Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
+[2026-03-23T15:06:28.242Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
+[2026-03-23T15:06:28.243Z] info  Using user-data-dir /root/.local/share/code-server
+[2026-03-23T15:06:28.253Z] info  Using config file /root/.config/code-server/config.yaml
+[2026-03-23T15:06:28.253Z] info  HTTP server listening on http://0.0.0.0:8080/
+[2026-03-23T15:06:28.253Z] info    - Authentication is disabled
+[2026-03-23T15:06:28.253Z] info    - Not serving HTTPS
+[2026-03-23T15:06:28.253Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
+[15:06:41] 
 
 
 
 
-[13:10:02] Extension host agent started.
-[13:10:02] Started initializing default profile extensions in extensions installation folder. file:///root/.local/share/code-server/extensions
-[13:10:02] Completed initializing default profile extensions in extensions installation folder. file:///root/.local/share/code-server/extensions
-[13:10:03] [127.0.0.1][c8500158][ManagementConnection] New connection established.
-[13:10:04] [127.0.0.1][5cdff902][ExtensionHostConnection] New connection established.
-[13:10:04] [127.0.0.1][5cdff902][ExtensionHostConnection] <64> Launched Extension Host Process.
-[2026-03-18T13:23:43.725Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
-[2026-03-18T13:23:43.726Z] info  Using user-data-dir /root/.local/share/code-server
-[2026-03-18T13:23:43.736Z] info  Using config file /root/.config/code-server/config.yaml
-[2026-03-18T13:23:43.736Z] info  HTTP server listening on http://0.0.0.0:8080/
-[2026-03-18T13:23:43.736Z] info    - Authentication is disabled
-[2026-03-18T13:23:43.736Z] info    - Not serving HTTPS
-[2026-03-18T13:23:43.736Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
-[13:23:52] 
+[15:06:41] Extension host agent started.
+[15:06:41] Started initializing default profile extensions in extensions installation folder. file:///root/.local/share/code-server/extensions
+[15:06:41] Completed initializing default profile extensions in extensions installation folder. file:///root/.local/share/code-server/extensions
+[15:06:42] [127.0.0.1][588699b5][ManagementConnection] New connection established.
+[15:06:42] [127.0.0.1][626fcb12][ExtensionHostConnection] New connection established.
+[15:06:43] [127.0.0.1][626fcb12][ExtensionHostConnection] <53> Launched Extension Host Process.
+[2026-03-23T15:11:56.179Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
+[2026-03-23T15:11:56.180Z] info  Using user-data-dir /root/.local/share/code-server
+[2026-03-23T15:11:56.190Z] info  Using config file /root/.config/code-server/config.yaml
+[2026-03-23T15:11:56.190Z] info  HTTP server listening on http://0.0.0.0:8080/
+[2026-03-23T15:11:56.190Z] info    - Authentication is disabled
+[2026-03-23T15:11:56.190Z] info    - Not serving HTTPS
+[2026-03-23T15:11:56.190Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
+[15:11:59] 
 
 
 
 
-[13:23:52] Extension host agent started.
-[13:24:12] [127.0.0.1][3803bc89][ManagementConnection] New connection established.
-[13:24:13] [127.0.0.1][08dcb9c5][ExtensionHostConnection] New connection established.
-[13:24:13] [127.0.0.1][08dcb9c5][ExtensionHostConnection] <53> Launched Extension Host Process.
-[2026-03-18T14:04:38.028Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
-[2026-03-18T14:04:38.029Z] info  Using user-data-dir /root/.local/share/code-server
-[2026-03-18T14:04:38.038Z] info  Using config file /root/.config/code-server/config.yaml
-[2026-03-18T14:04:38.039Z] info  HTTP server listening on http://0.0.0.0:8080/
-[2026-03-18T14:04:38.039Z] info    - Authentication is disabled
-[2026-03-18T14:04:38.039Z] info    - Not serving HTTPS
-[2026-03-18T14:04:38.039Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
-[2026-03-18T14:10:38.301Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
-[2026-03-18T14:10:38.302Z] info  Using user-data-dir /root/.local/share/code-server
-[2026-03-18T14:10:38.313Z] info  Using config file /root/.config/code-server/config.yaml
-[2026-03-18T14:10:38.313Z] info  HTTP server listening on http://0.0.0.0:8080/
-[2026-03-18T14:10:38.313Z] info    - Authentication is disabled
-[2026-03-18T14:10:38.313Z] info    - Not serving HTTPS
-[2026-03-18T14:10:38.314Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
-[2026-03-18T14:14:21.589Z] info  code-server 4.91.0 fb3e3e1546d571e9973e86482bcd925c1918ec27
-[2026-03-18T14:14:21.590Z] info  Using user-data-dir /root/.local/share/code-server
-[2026-03-18T14:14:21.600Z] info  Using config file /root/.config/code-server/config.yaml
-[2026-03-18T14:14:21.600Z] info  HTTP server listening on http://0.0.0.0:8080/
-[2026-03-18T14:14:21.600Z] info    - Authentication is disabled
-[2026-03-18T14:14:21.600Z] info    - Not serving HTTPS
-[2026-03-18T14:14:21.600Z] info  Session server listening on /root/.local/share/code-server/code-server-ipc.sock
+[15:11:59] Extension host agent started.
+[15:12:05] [127.0.0.1][ba3f522f][ManagementConnection] New connection established.
+[15:12:05] [127.0.0.1][cf7a09e9][ExtensionHostConnection] New connection established.
+[15:12:05] [127.0.0.1][cf7a09e9][ExtensionHostConnection] <53> Launched Extension Host Process.

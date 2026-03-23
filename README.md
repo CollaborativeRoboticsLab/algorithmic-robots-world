@@ -1,24 +1,12 @@
 # Algorithmic Robots World
 
-This repo provides multiple containers to work with Turtlebot4 Robots in [DiscoveryServer Mode](https://turtlebot.github.io/turtlebot4-user-manual/setup/discovery_server.html). 
+This repo provides multiple containers to work with,
 
-This pacakge provides and utilizes following containers
+- Turtlebot4 Physical robots
+- Simulation environment depicting a Mars surface
+- Jupyter Notebook exploring basic concepts
 
-- **Turtlebot4-Discovery**          
-    Provides the discovery service for the simulation
-
-- **Turtlebot4-Rviz**   
-    Provides rviz tools to interact with both simulation and physical robots
-
-- **Turtlebot4-workspace**  
-    Provides a web browser based workspace that can be used to test code on both simulation and physical robots
-
-- **Algorithmic-Robots-Mars-Surface-Simulation**         
-    Provides the Unreal based simulation environment
-
-- **Algorithmic-Robots-Labs**  
-    Provides a Jupyter notebooks based workspace to explore mathematical concepts surrounding robotics
-
+[More information on Containers and Usage](./docs/containers.md)
 
 ## Install Docker
 
@@ -32,16 +20,20 @@ On the terminal run the following command to clone the repo
 git clone https://github.com/CollaborativeRoboticsLab/algorithmic-robots-world.git
 ```
 
-Required environmental variable need to be in a `.env` file. An `example.env` file is available. Rename that file to `.env` and update the values as required. 
+## Configure the parameters
+
+Required environmental variables need to be in a `.env` file. An `example.env` file is available. Rename that file to `.env` and update the values as required.
+
+[More information on Parameters](./docs/parameters.md)
 
 
 ## Start Simulation environment
 
 ```bash
 cd algorithmic-robots-world
-docker compose pull
+docker compose -f compose-simulation.yaml pull
 xhost +local:root
-docker compose up
+docker compose -f compose-simulation.yaml up
 ```
 
 ## Start Physical robot environment

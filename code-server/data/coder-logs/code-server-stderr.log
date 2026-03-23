@@ -2,9 +2,9 @@ File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
 File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
 a socket was left hanging
 a socket was left hanging
-[13:23:54] [127.0.0.1][5cdff902][ExtensionHostConnection] Unknown reconnection token (never seen).
-[13:23:54] [127.0.0.1][c8500158][ManagementConnection] Unknown reconnection token (never seen).
-File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
+[15:12:01] [127.0.0.1][588699b5][ManagementConnection] Unknown reconnection token (never seen).
+[15:12:02] [127.0.0.1][626fcb12][ExtensionHostConnection] Unknown reconnection token (never seen).
 File not found: /usr/lib/code-server/lib/vscode/out/vsda_bg.wasm
+File not found: /usr/lib/code-server/lib/vscode/out/vsda.js
 a socket was left hanging
 a socket was left hanging
