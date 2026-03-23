@@ -3,15 +3,15 @@
 This repo uses following containers
 
 - **Turtlebot4-workspace**
-    - link [ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy](ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy)
+    - link [ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy](https://github.com/CollaborativeRoboticsLab/turtlebot4-docker/pkgs/container/turtlebot4-workspace)
     - Provides a web browser based workspace that can be used to test code on both simulation and physical robots. Contains ROS2 Jazzy Desktop with GUI tools for debugging. Use this to do development work
 
 - **Algorithmic-Robots-Mars-Surface**   
-    - link [ghcr.io/collaborativeroboticslab/algorithmic-robots-mars-surface:jazzy](ghcr.io/collaborativeroboticslab/algorithmic-robots-mars-surface:jazzy)     
+    - link [ghcr.io/collaborativeroboticslab/algorithmic-robots-mars-surface:jazzy](https://github.com/CollaborativeRoboticsLab/algorithmic-robots-world/pkgs/container/algorithmic-robots-mars-surface)     
     - Provides the Unreal based simulation environment to work with when Physical robots are inaccessible.
 
 - **Algorithmic-Robots-Labs**
-    - link [ghcr.io/collaborativeroboticslab/algorithmic-robots-labs:latest](ghcr.io/collaborativeroboticslab/algorithmic-robots-labs:latest)
+    - link [ghcr.io/collaborativeroboticslab/algorithmic-robots-labs:latest](https://github.com/CollaborativeRoboticsLab/algorithmic-robots-labs/pkgs/container/algorithmic-robots-labs)
     - Provides a Jupyter notebooks based workspace to explore mathematical concepts surrounding robotics
 
 
