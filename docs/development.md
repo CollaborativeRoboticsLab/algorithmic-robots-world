@@ -18,7 +18,7 @@ We recommend creating a ROS 2 colcon workspace inside `/workspace` as shown belo
 ```bash
 # In the code-server terminal (already sourced via ros entrypoint)
 mkdir -p /workspace/succulence_ws/src
-cd /workspace/turtle_ws
+cd /workspace/succulence_ws
 colcon build --merge-install
 
 # Use the overlay
