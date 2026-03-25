@@ -17,7 +17,7 @@ We recommend creating a ROS 2 colcon workspace inside `/workspace` as shown belo
 
 ```bash
 # In the code-server terminal (already sourced via ros entrypoint)
-mkdir -p /workspace/turtle_ws/src
+mkdir -p /workspace/succulence_ws/src
 cd /workspace/turtle_ws
 colcon build --merge-install
 
@@ -26,4 +26,4 @@ source /workspace/install/setup.bash
 ros2 pkg list
 ```
 
-Place your packages in `/workspace/turtle_ws/src`, build with `colcon`, and run as usual. The code-server terminal is ROS-ready (environment is sourced by the container entrypoint).
+Place your packages in `/workspace/succulence_ws/src`, build with `colcon`, and run as usual. The code-server terminal is ROS-ready (environment is sourced by the container entrypoint).
