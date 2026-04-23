@@ -21,3 +21,5 @@ services:
       - ./workspace:/workspace:rw
       - ./code-server/config:/root/.config/code-server:rw
       - ./code-server/data:/root/.local/share/code-server:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev:rw

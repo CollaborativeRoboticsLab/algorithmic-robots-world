@@ -13,7 +13,8 @@ services:
     privileged: true
     network_mode: host
     volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw    # GUI related    
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev:rw 
 
   ar-workspace:
     image: ghcr.io/collaborativeroboticslab/turtlebot4-workspace:jazzy
@@ -33,3 +34,5 @@ services:
       - ./workspace:/workspace:rw
       - ./code-server/config:/root/.config/code-server:rw
       - ./code-server/data:/root/.local/share/code-server:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/dev:rw
